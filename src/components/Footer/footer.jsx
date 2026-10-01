@@ -8,6 +8,7 @@ export default function Footer() {
 
             <div>
                 <h1>About The ToKa Fitness</h1>
+                
                 <p>
                     About us
                 </p>
