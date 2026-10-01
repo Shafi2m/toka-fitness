@@ -1,6 +1,6 @@
 import './App.css'
 import Header from "./components/Header/Header"
-import Footer from "./components/Footer/Footer"
+import Footer from "./components/Footer/footer"
 import Pages from './routing'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <main className="main">
         <Pages/>
       </main>
-      <Footer />
+      <Footer/>
    </>
   )
 }
