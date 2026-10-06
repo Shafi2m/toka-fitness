@@ -30,9 +30,35 @@ export default function Auth() {
 }
 
 function RegisterForm({toggleForm}){
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [error, setError] = useState("");
+
+    function SubmitForm(e){
+        e.preventDefault();
+
+        if(password != confirmPassword){
+            setError("WRONG!!!!!!!!")
+
+            return
+        } 
+
+
+      
+
+    }
+
     return(
-        <form className="auth-form">
+        <form onSubmit={SubmitForm} className="auth-form">
             Register
+            <input type="email" placeholder="email@gmail.com" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="password" placeholder="Password123" className="form-input" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <input type="password" placeholder="Password123" className="form-input" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
+            <input type="text" placeholder="James James" className="form-input"/>
+            <button type="submit">register</button>
+            {error ? <p className="error-msg">{error}</p> : null}
 
             <div>
                 <p>already have an account?</p>
