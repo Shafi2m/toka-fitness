@@ -4,14 +4,13 @@
   max-width: 100vw;
   margin: auto;
   overflow: hidden;
-  border-radius: 16px;
 }
 
 .carousel-image {
   display: block;
   width: 100%;
   object-fit: cover;
-  max-height: 50vw;
+  max-height: 600px;
 }
 
 .carousel-btn {

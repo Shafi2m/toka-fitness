@@ -1,0 +1,76 @@
+.dashboard {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  background: white;
+}
+
+/* Left side */
+
+.main-content {
+  flex: 1;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #555;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Right side */
+
+.sidebar {
+  width: 350px;
+  display: flex;
+  gap: 20px;
+  background: #555;
+  padding: 20px;
+  color: white;
+}
+
+
+/* Tasks */
+
+.tasks {
+  flex: 1;
+}
+
+.tasks h2,
+.description h2 {
+  margin-top: 0;
+}
+
+.task {
+  padding: 6px 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.task:hover {
+  opacity: 0.7;
+}
+
+.task.selected {
+  color: #d5cfea;
+}
+
+
+/* Description */
+
+.description {
+  flex: 1;
+  background: #999;
+  padding: 15px;
+}
+
+.description p {
+  line-height: 1.5;
+}

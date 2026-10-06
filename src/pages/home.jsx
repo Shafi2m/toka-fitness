@@ -19,7 +19,7 @@ export default function Home(){
                 </div>
 
                 <p className="text-2">Some Text Some Text Some Text Some Text Some Text Some T</p>
-                <a className="member-links">some link</a>
+                <a className="member-links" href="/">some link</a>
             </div>
             <div className="teirs">
                 <div className="circle">
@@ -27,7 +27,7 @@ export default function Home(){
                 
                 </div>
                 <p className="text-2">Some Text Some Text Some Text Some Text Some Text Some T</p>
-                <a className="member-links">some link</a>
+                <a className="member-links" href="/">some link</a>
             </div>
             <div className="teirs">
                 <div className="circle">
@@ -35,7 +35,7 @@ export default function Home(){
                 
                 </div>
                 <p className="text-2">Some Text Some Text Some Text Some Text Some Text Some T</p>
-                <a className="member-links">some link</a>
+                <a className="member-links" href="/">some link</a>
             </div>
         </div>
         </div>
