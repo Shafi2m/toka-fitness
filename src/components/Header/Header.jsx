@@ -23,9 +23,11 @@ export default function Header(){
  
 
         <NavLink><img className="access" src={accessibility}/></NavLink>
-        <NavLink to="Auth" className="join-button">
+        
+        <NavLink to="Auth" className="join-button"  >
           <img className="profile-pic" src={pfp}/>
         </NavLink>
+    
       </header>
  
       <div className={`fullscreen-menu ${menuOpen ? "open" : ""}`}>
@@ -39,10 +41,8 @@ export default function Header(){
  
         <nav className="menu-links">
           <br />
-          <NavLink to="/about">ABOUT TOKA</NavLink>
+          <NavLink to="Member">MEMBERSHIP</NavLink>
           <br />
-          <NavLink to="/membership">MEMBERSHIP</NavLink>
-          <br />a
           <NavLink to="dashboard">DASHBOARD</NavLink>
 
           <br />

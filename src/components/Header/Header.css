@@ -13,6 +13,7 @@
     width: 100%;
     width: 35px;
     border-radius:20px ;
+    justify-self: center;
 }
 .profile>button{
     background-color: transparent;
@@ -94,14 +95,15 @@
  
  
 .join-button {
-
-  padding: 12px 25px;
+  margin: 0;
+  padding: 20px;
   background: white;
   color: #111111;
   border-radius: 100px;
+  width: 35px;
  
   transition:
-    background 0.25s ease,
+    background 0.25s ease;
 }
  
 .join-button:hover {
