@@ -1,0 +1,206 @@
+/* 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+.chat-page {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 18px 4% 20px 0;
+}
+
+.sidebar {
+  width: 49px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.add-friend {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #dedede;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat-window {
+  height: 70vh;
+  min-height: 360px;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #888;
+  background: #b0b0b0;
+  padding: 38px 10px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.message-row.me {
+  justify-content: flex-end;
+}
+
+.message-row.other {
+  justify-content: flex-start;
+}
+
+.profile-icon {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #292929;
+  border-radius: 50%;
+  color: #292929;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -16px;
+}
+
+.message-bubble {
+  max-width: 65%;
+  min-width: 150px;
+  min-height: 82px;
+  padding: 22px 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  color: white;
+}
+
+.me .message-bubble {
+  background: #91c1e5;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.other .message-bubble {
+  background: #87949c;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.message-form {
+  min-height: 54px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.message-form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  background: transparent;
+  padding: 2px 0;
+}
+
+.message-form input::placeholder {
+  color: #aaa;
+}
+
+.input-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.extra-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.extra-actions button {
+  border: none;
+  background: transparent;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.send-button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  background: #d6d6d6;
+  color: #777;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background: #91c1e5;
+}
+
+@media (max-width: 600px) {
+  .chat-page {
+    padding: 12px 12px 12px 4px;
+    gap: 6px;
+  }
+
+  .sidebar {
+    width: 36px;
+  }
+
+  .add-friend {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .chat-window {
+    height: 68vh;
+    min-height: 320px;
+    padding: 24px 8px;
+    gap: 22px;
+  }
+
+  .message-bubble {
+    min-width: 0;
+    max-width: 82%;
+    min-height: 65px;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .profile-icon {
+    width: 17px;
+    height: 17px;
+  }
+} */

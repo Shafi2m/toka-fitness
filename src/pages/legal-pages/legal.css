@@ -1,0 +1,35 @@
+    .body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #222;
+      line-height: 1.7;
+    }
+
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+
+
+    .number {
+      color: #176b50;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+   
+ 
+
+    @media (max-width: 600px) {
+      .law-card {
+        padding: 15px;
+        gap: 12px;
+      }
+
+      header h1 {
+        font-size: 26px;
+      }
+    }

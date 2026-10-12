@@ -4,7 +4,7 @@ import Price from "../../components/prices/price"
 export default function Member(){
     return(
         <>
-        <div>
+        <div className="memberships">
             <div className="card">
                 <h1>Toka Basic</h1>
                 <div className="icon">
@@ -137,7 +137,7 @@ export default function Member(){
                 </div>
 
                 <div className="price">
-                <Price money={"29.99"}/>
+                <Price money={"2999.99"}/>
                 </div>
             </div>
         </div>

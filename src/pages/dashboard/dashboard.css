@@ -1,15 +1,67 @@
+/* Main layout */
+
 .dashboard {
   display: flex;
   gap: 30px;
   padding: 30px;
-  background: white;
 }
-
-/* Left side */
 
 .main-content {
   flex: 1;
+  min-width: 0;
 }
+
+/* Circular progress */
+
+.progress-container {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin: 0 auto 25px;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-background,
+.progress-value {
+  fill: none;
+  stroke-width: 10;
+}
+
+.progress-background {
+  stroke: #d0cad8;
+}
+
+.progress-value {
+  stroke: #211a32;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-text span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.progress-text small {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Video */
 
 .video-container {
   width: 100%;
@@ -20,57 +72,53 @@
 .video-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-
-/* Right side */
+/* Sidebar */
 
 .sidebar {
   width: 350px;
   display: flex;
-  gap: 20px;
-  background: #555;
+  gap: 15px;
   padding: 20px;
+  background: #555;
   color: white;
 }
 
-
-/* Tasks */
-
-.tasks {
+.tasks,
+.description {
   flex: 1;
+  min-width: 0;
 }
 
-.tasks h2,
-.description h2 {
-  margin-top: 0;
+.task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .task {
-  padding: 6px 0;
+  color: white;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  text-align: left;
   cursor: pointer;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.task:hover {
-  opacity: 0.7;
 }
 
 .task.selected {
   color: #d5cfea;
+  font-weight: bold;
 }
 
-
-/* Description */
+.task-row input {
+  cursor: pointer;
+  accent-color: #bdb3ca;
+}
 
 .description {
-  flex: 1;
   background: #999;
   padding: 15px;
-}
-
-.description p {
-  line-height: 1.5;
 }

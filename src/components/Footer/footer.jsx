@@ -1,13 +1,15 @@
 import "./footer.css"
 import App from "../../assets/App Store.png"
 import plays from "../../assets/Play Store.png"
+import { NavLink } from "react-router";
+import Legal from "../../pages/legal-pages/legal";
 
 export default function Footer() {
     return (
         <div className="foot-stuff">
 
             <div>
-                <h1>About The ToKa Fitness</h1>
+                <NavLink className="H-link" to="Legal">About The ToKa Fitness</NavLink>
                 
                 <p>
                     About us
@@ -26,7 +28,7 @@ export default function Footer() {
                 </p>
             </div>
             <div>
-                <h1>The gyms</h1>
+                <NavLink className="H-link" to="Legal">The gyms</NavLink>
                 <p>
                     Membership rules
                 </p>
@@ -45,14 +47,14 @@ export default function Footer() {
 
             </div>
             <div>
-                <h1>Corporate</h1>
+                <NavLink className="H-link" to="Legal">Corporate</NavLink>
                 <p>Corporate membership</p>
                 <p>Property information</p>
                 <p>Careers</p>
                 <p>Corporate site</p>
             </div>
             <div>
-                <h1>Legal</h1>
+                <NavLink className="H-link" to="Legal">Legal</NavLink>
                 <p>Membership agreement</p>
                 <p>Accessibility</p>
                 <p>Legal stuff</p>

@@ -36,3 +36,10 @@
     justify-content: center;
     padding-top: 10px ;
 }
+.text-speech{
+    display: flex;
+    alignItems: center;
+    justifyContent: space-between;
+    flexWrap: wrap;
+     gap: 10px;
+}
