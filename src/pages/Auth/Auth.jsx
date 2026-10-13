@@ -73,6 +73,8 @@ function LoginForm({toggleForm}){
         <form className="auth-form">
             Login
             <div>
+                <input type="email" placeholder="email@gmail.com" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="password" placeholder="Password123" className="form-input" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <p>Don't have an account?</p>
                 <p>find out more</p>
                 <button onClick={toggleForm} className="form-toggle-btn">Log In</button>
