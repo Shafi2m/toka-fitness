@@ -8,8 +8,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-
-  --bg-color: #49494b;
+    
+    --accent2:rgb(71, 33, 36)6;
+    --accent: #e63946;
+    --text: #1d1d1f;
+    --muted: #555;
+    --card-bg: #fafafa;
+    --border: #e5e5e5;
 
 }
 

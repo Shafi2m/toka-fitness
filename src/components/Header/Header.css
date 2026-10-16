@@ -1,7 +1,7 @@
 .site-header{
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-color);
+    background-color: var(--muted);
 }
 
 .site-header .section-1{
@@ -53,12 +53,9 @@
     transition: color 0.25s ease;
 }
 
-.site-header .menu-button:hover{
-    color: #1fff32;
-}
-
+.site-header .menu-button:hover,
 .site-header .close-button:hover{
-    color: #4cff1f;
+    color: var(--accent);
 }
 
 .site-header .join-button{
@@ -72,7 +69,7 @@
 }
 
 .site-header .join-button:hover{
-    background: #005e05;
+    background: var(--accent2);
     color: var(--yellow, #ffd700);
 }
 
@@ -138,6 +135,6 @@
 }
 
 .site-header .menu-links a:hover{
-    color: #27ff1f;
+    color: var(--accent);
     transform: translateX(12px);
 }
