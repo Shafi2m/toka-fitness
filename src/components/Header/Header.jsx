@@ -1,56 +1,59 @@
 import "./Header.css"
-import Logo from "../../assets/Logo.png";
 import Logot from "../../assets/Logo-bg-none.png"
 import pfp from "../../assets/user.png"
-import search from "../../assets/search.png"
 import accessibility from "../../assets/accessibility.png"
-import { NavLink } from "react-router";
-import {useState} from "react"
+import { NavLink, useLocation } from "react-router";
+import { useState, useEffect } from "react"
 
 export default function Header(){
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+    const closeMenu = () => setMenuOpen(false);
+
+    // close the menu whenever the page changes
+    useEffect(() => {
+        setMenuOpen(false);
+    }, [location.pathname]);
+
     return(
-        <div className="outline">
+        <div className="site-header">
             <div className="section-1">
-               <NavLink to="/"> <img className="Logo" src={Logot}/></NavLink>
-                <div className="profile">
-                
-                </div>
+                <NavLink to="/">
+                    <img className="header-logo" src={Logot} alt="Toka Fitness"/>
+                </NavLink>
+
                 <header className="header">
-        <button className="menu-button" onClick={() => setMenuOpen(true)}>
-          MENU
-        </button>
- 
+                    <button className="menu-button" onClick={() => setMenuOpen(true)}>
+                        MENU
+                    </button>
 
-        <NavLink><img className="access" src={accessibility}/></NavLink>
-        
-        <NavLink to="Auth" className="join-button"  >
-          <img className="profile-pic" src={pfp}/>
-        </NavLink>
-    
-      </header>
- 
-      <div className={`fullscreen-menu ${menuOpen ? "open" : ""}`}>
-        <div className="menu-header">
-          <NavLink to="Auth"><img src={Logot} className="logo" /></NavLink>
- 
-          <button className="close-button" onClick={() => setMenuOpen(false)}>
-            CLOSE
-          </button>
-        </div>
- 
-        <nav className="menu-links">
-          <br />
-          <NavLink to="Member">MEMBERSHIP</NavLink>
-          <br />
-          <NavLink to="dashboard">DASHBOARD</NavLink>
+                    <button className="access-button" aria-label="Accessibility options">
+                        <img className="access" src={accessibility} alt=""/>
+                    </button>
 
-          <br />
-          <NavLink to="social">TOKA SOCIAL</NavLink>
-        </nav>
-      </div>
+                    <NavLink to="/Auth" className="join-button" aria-label="Account">
+                        <img className="profile-pic" src={pfp} alt=""/>
+                    </NavLink>
+                </header>
+
+                <div className={`fullscreen-menu ${menuOpen ? "open" : ""}`}>
+                    <div className="menu-header">
+                        <NavLink to="/" onClick={closeMenu}>
+                            <img src={Logot} className="menu-logo" alt="Toka Fitness"/>
+                        </NavLink>
+
+                        <button className="close-button" onClick={closeMenu}>
+                            CLOSE
+                        </button>
+                    </div>
+
+                    <nav className="menu-links">
+                        <NavLink to="/Member" onClick={closeMenu}>MEMBERSHIP</NavLink>
+                        <NavLink to="/dashboard" onClick={closeMenu}>DASHBOARD</NavLink>
+                        <NavLink to="/social" onClick={closeMenu}>TOKA SOCIAL</NavLink>
+                    </nav>
+                </div>
             </div>
-
         </div>
     )
 }

@@ -1,211 +1,143 @@
-.Logo{
-    width: 100%;
-    width: 89px;
+.site-header{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
 }
-.section-1{
+
+.site-header .section-1{
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
-.profile-pic{
-    border: 2px solid black;
-    width: 100%;
-    width: 35px;
-    border-radius:20px ;
-    justify-self: center;
+
+.site-header .header-logo{
+    width: 89px;
 }
-.profile>button{
-    background-color: transparent;
-    border: none;    
-    
-}
-.outline{
-    display:flex;
-    flex-direction: column;
-    background-color: var(--bg-color);
-}
-.section-2{
+
+.site-header .header{
     display: flex;
     align-items: center;
-    border-top:3px solid black ;
-    border-bottom :2px solid black ;
-    justify-content: space-between;
     gap: 15px;
-    flex: 1;
-    padding-left: 15px;
 }
-.link{
+
+.site-header .profile-pic{
+    display: block;
     border: 2px solid black;
-    padding: 15px;
+    width: 35px;
+    border-radius: 20px;
 }
-.search-button{
-  width: 100%;
-  width: 25px;
-  border: 2px solid black;
-}
-.search{
+
+.site-header .access-button{
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
     display: flex;
-    align-items: stretch;
-    margin-left: auto;
-
 }
-.search-bar{
+
+.site-header .access{
+    width: 15px;
+}
+
+.site-header .menu-button,
+.site-header .close-button{
+    border: none;
+    background: none;
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.site-header .menu-button:hover{
+    color: #1fff32;
+}
+
+.site-header .close-button:hover{
+    color: #4cff1f;
+}
+
+.site-header .join-button{
+    margin: 0;
+    padding: 20px;
+    background: white;
+    color: #111111;
+    border-radius: 100px;
+    width: 35px;
+    transition: background 0.25s ease;
+}
+
+.site-header .join-button:hover{
+    background: #005e05;
+    color: var(--yellow, #ffd700);
+}
+
+/* ---------- Fullscreen menu ---------- */
+
+.site-header .fullscreen-menu{
+    position: fixed;
+    inset: 0;
+    background: #111111;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.site-header .fullscreen-menu.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.site-header .menu-header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.site-header .menu-logo{
+    width: 89px;
+}
+
+.site-header .menu-links{
     flex: 1;
-    box-sizing:border-box ;
-}
-.access{
- width: 100%;
- width: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
 }
 
-.menu-button {
-  justify-self: start;
- 
-  border: none;
-  background: none;
- 
-  color: white;
- 
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
- 
-  cursor: pointer;
- 
-  transition: color 0.25s ease;
+.site-header .menu-links a{
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(32px, 5vw, 70px);
+    font-weight: 600;
+    letter-spacing: -1px;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
- 
-.menu-button:hover {
-  color: #1fff32;
-}
- 
- 
-.logo {
-  color: white;
-  text-decoration: none;
- 
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 4px;
- 
-  white-space: nowrap;
-}
- 
- 
-.join-button {
-  margin: 0;
-  padding: 20px;
-  background: white;
-  color: #111111;
-  border-radius: 100px;
-  width: 35px;
- 
-  transition:
-    background 0.25s ease;
-}
- 
-.join-button:hover {
-  background: #005e05;
-  color: var(--yellow);
-}
- 
- 
-.fullscreen-menu {
-  position: fixed;
-  inset: 0;
- 
-  background: #111111;
- 
-  z-index: 100;
- 
-  display: flex;
-  flex-direction: column;
- 
-  padding: 30px 50px;
-  box-sizing: border-box;
- 
-  opacity: 0;
-  visibility: hidden;
- 
-  transform: translateY(-20px);
- 
-  transition:
-    opacity 0.35s ease,
-    transform 0.35s ease,
-    visibility 0.35s ease;
-}
- 
-.fullscreen-menu.open {
-  opacity: 1;
-  visibility: visible;
- 
-  transform: translateY(0);
-}
- 
- 
-.menu-header {
-  height: 50px;
- 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- 
-  color: white;
- 
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
- 
-.close-button {
-  border: none;
-  background: none;
- 
-  color: white;
- 
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
- 
-  cursor: pointer;
- 
-  transition: color 0.25s ease;
-}
- 
-.close-button:hover {
-  color: #4cff1f;
-}
- 
- 
-.menu-links {
-  flex: 1;
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- 
-  gap: 18px;
-}
- 
-.menu-links a {
-  width: fit-content;
- 
-  color: white;
-  text-decoration: none;
- 
-  font-size: clamp(32px, 5vw, 70px);
-  font-weight: 600;
-  letter-spacing: -1px;
- 
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
-}
- 
-.menu-links a:hover {
-  color: #27ff1f;
-  transform: translateX(12px);
+
+.site-header .menu-links a:hover{
+    color: #27ff1f;
+    transform: translateX(12px);
 }
