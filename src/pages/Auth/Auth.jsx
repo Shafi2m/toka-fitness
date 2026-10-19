@@ -1,6 +1,7 @@
 import "./Auth.css"
 import {useState} from "react"
-import login_img from "../../assets/pexels-jdgromov-4716814.jpg"
+import login_img from "../../assets/pexels-alesiakozik-8155159.jpg"
+import login_img2 from "../../assets/pexels-readymade-3850888.jpg"
 
 
 
