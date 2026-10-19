@@ -6,8 +6,6 @@
     --card: #ffffff;
     --line: #cbd3de;
     --muted: #4a5568;
-    --accent: #2b50f5;
-    --accent-light: #8aa6ff;
 
     display: flex;
     flex-wrap: wrap;
@@ -80,10 +78,14 @@
     text-wrap: pretty;
 }
 
-/* Gives the <br/>-separated lines a little air between them */
-.memberships .desc br {
-    display: block;
-    content: "";
+/* spacing between lines (works once the lists are <ul>, see note) */
+.memberships .desc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.memberships .desc li + li {
     margin-top: 0.8rem;
 }
 
@@ -108,7 +110,7 @@
 
 .memberships .card:nth-child(2) {
     border: 2px solid var(--accent);
-    box-shadow: 0 12px 32px -12px rgba(43, 80, 245, 0.35);
+    box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .memberships .card:nth-child(2) .icon::before {
@@ -134,7 +136,6 @@
 
 .memberships .card:nth-child(3) .icon::before {
     width: 100%;
-    background: var(--accent-light);
 }
 
 .memberships .card:nth-child(3) .desc {
