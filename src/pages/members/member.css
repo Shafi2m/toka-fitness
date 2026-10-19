@@ -46,7 +46,6 @@
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.01em;
-    text-transform: capitalize;
 }
 
 /* ---------- Tier meter: fills 1/3, 2/3, full ---------- */
@@ -73,19 +72,15 @@
 .memberships .desc {
     flex: 1;
     font-size: 0.975rem;
-    line-height: 1.5;
+    line-height: 2;
     color: var(--muted);
     text-wrap: pretty;
 }
 
-/* spacing between lines (works once the lists are <ul>, see note) */
-.memberships .desc ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.memberships .desc li + li {
+/* Gives the <br/>-separated lines a little air between them */
+.memberships .desc br {
+    display: block;
+    content: "";
     margin-top: 0.8rem;
 }
 
@@ -95,7 +90,7 @@
     margin-top: auto;
     display: flex;
     align-items: baseline;
-    gap: 0.25rem;
+    gap: 0.15rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--line);
     font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
@@ -106,7 +101,11 @@
     white-space: nowrap;
 }
 
-/* ---------- Plus: accent outline, the one to notice ---------- */
+.memberships .price span {
+    font-size: 0.6em;
+}
+
+/* ---------- Plus: accent outline ---------- */
 
 .memberships .card:nth-child(2) {
     border: 2px solid var(--accent);
