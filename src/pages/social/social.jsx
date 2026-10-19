@@ -68,23 +68,12 @@ export default function Social() {
             type="text"
             value={message}
             onChange={(event) => setMessage(event.target.value)}
-            placeholder="What would you like to know?"
+            placeholder="hi......"
             aria-label="Write a message"
           />
 
           <div className="input-actions">
-            <div className="extra-actions">
-              <button type="button" aria-label="Add image">
-                ▧
-              </button>
-              <button type="button" aria-label="Add attachment">
-                ‹›
-              </button>
-              <button type="button" aria-label="Record audio">
-                ♩
-              </button>
-            </div>
-
+        
             <button
               type="submit"
               className="send-button"
