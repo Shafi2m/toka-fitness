@@ -1,15 +1,11 @@
 import "./member.css"
-import Price from "../../components/prices/price"
 
 export default function Member(){
     return(
-        <>
         <div className="memberships">
             <div className="card">
                 <h1>Toka Basic</h1>
-                <div className="icon">
-
-                </div>
+                <div className="icon"></div>
 
                 <div className="desc">
                     Access to Toka Fitness
@@ -35,21 +31,19 @@ export default function Member(){
                     Community fitness challenges
                     <br/>
                     Motivation and fitness tips
-                    <br/>
                 </div>
 
                 <div className="price">
-                <Price money={"0.00"}/>
+                    <span>£</span>0.00 per month
                 </div>
             </div>
-            <div className="card">
-                <h1>Toka  Plus</h1>
-                <div className="icon">
 
-                </div>
+            <div className="card">
+                <h1>Toka Plus</h1>
+                <div className="icon"></div>
 
                 <div className="desc">
-                    Access to everything in the Free Membership
+                    Access to everything in Toka Basic
                     <br/>
                     Personalised workout plans based on your goals
                     <br/>
@@ -78,22 +72,19 @@ export default function Member(){
                     Priority access to new features and content
                     <br/>
                     Enhanced social and community features
-                    <br/>
                 </div>
 
                 <div className="price">
-                <Price money={"29.99"}/>
+                    <span>£</span>29.99 per month
                 </div>
             </div>
-        
-          <div className="card">
-                <h1>Toka supreme</h1>
-                <div className="icon">
 
-                </div>
+            <div className="card">
+                <h1>Toka Supreme</h1>
+                <div className="icon"></div>
 
                 <div className="desc">
-                   Access to everything in the Free and Plus Memberships
+                    Access to everything in Toka Basic and Toka Plus
                     <br/>
                     Fully personalised workout plans
                     <br/>
@@ -132,15 +123,12 @@ export default function Member(){
                     Priority access to premium content
                     <br/>
                     Complete access to the Toka Fitness experience
-                    <br/>
-
                 </div>
 
                 <div className="price">
-                <Price money={"2999.99"}/>
+                    <span>£</span>2999.99 per month
                 </div>
             </div>
         </div>
-        </>
     )
 }

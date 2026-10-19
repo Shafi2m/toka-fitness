@@ -6,8 +6,6 @@
     --card: #ffffff;
     --line: #cbd3de;
     --muted: #4a5568;
-    --accent: #2b50f5;
-    --accent-light: #8aa6ff;
 
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +46,6 @@
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.01em;
-    text-transform: capitalize;
 }
 
 /* ---------- Tier meter: fills 1/3, 2/3, full ---------- */
@@ -75,16 +72,8 @@
 .memberships .desc {
     flex: 1;
     font-size: 0.975rem;
-    line-height: 1.5;
+    line-height: 2;
     color: var(--muted);
-    text-wrap: pretty;
-}
-
-/* Gives the <br/>-separated lines a little air between them */
-.memberships .desc br {
-    display: block;
-    content: "";
-    margin-top: 0.8rem;
 }
 
 /* ---------- Price pinned to the bottom ---------- */
@@ -93,7 +82,7 @@
     margin-top: auto;
     display: flex;
     align-items: baseline;
-    gap: 0.25rem;
+    gap: 0.15rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--line);
     font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
@@ -104,11 +93,15 @@
     white-space: nowrap;
 }
 
-/* ---------- Plus: accent outline, the one to notice ---------- */
+.memberships .price span {
+    font-size: 0.6em;
+}
+
+/* ---------- Plus: accent outline ---------- */
 
 .memberships .card:nth-child(2) {
     border: 2px solid var(--accent);
-    box-shadow: 0 12px 32px -12px rgba(43, 80, 245, 0.35);
+    box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .memberships .card:nth-child(2) .icon::before {
@@ -134,7 +127,6 @@
 
 .memberships .card:nth-child(3) .icon::before {
     width: 100%;
-    background: var(--accent-light);
 }
 
 .memberships .card:nth-child(3) .desc {
