@@ -104,7 +104,7 @@ export default function Home(){
 
                 </div>
 
-                <h1>ToKa supreme</h1>
+                <h1>ToKa Supreme</h1>
 
                 <p className="text-2">Everything included in Member
 

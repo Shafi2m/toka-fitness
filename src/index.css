@@ -16,6 +16,10 @@
     --card-bg: #fafafa;
     --border: #e5e5e5;
 
+     --ink: #101828;
+    --paper: #e8ecf1;
+    --line: #cbd3de;
+   
 }
 
 #root {

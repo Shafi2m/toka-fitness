@@ -33,11 +33,11 @@
 }
 
 .progress-background {
-  stroke: #d0cad8;
+  stroke: #f1c4c8;
 }
 
 .progress-value {
-  stroke: #211a32;
+  stroke: var(--accent);
   stroke-linecap: round;
   transition: stroke-dashoffset 0.5s ease;
 }
@@ -109,13 +109,13 @@
 }
 
 .task.selected {
-  color: #d5cfea;
+  color: #f1c4c8;
   font-weight: bold;
 }
 
 .task-row input {
   cursor: pointer;
-  accent-color: #bdb3ca;
+  accent-color: #f1c4c8;
 }
 
 .description {

@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap");
 
 .memberships {
-    --ink: #101828;
-    --paper: #e8ecf1;
-    --card: #ffffff;
-    --line: #cbd3de;
-    --muted: #4a5568;
-
     display: flex;
     flex-wrap: wrap;
     gap: clamp(1.5rem, 3vw, 2.5rem);
@@ -19,12 +13,6 @@
     box-sizing: border-box;
 }
 
-.memberships *,
-.memberships *::before,
-.memberships *::after {
-    box-sizing: border-box;
-}
-
 /* ---------- Card base (Basic) ---------- */
 
 .memberships .card {
@@ -33,7 +21,7 @@
     flex-direction: column;
     gap: 1.5rem;
     padding: 2.5rem 2.25rem;
-    background: var(--card);
+    background: var(--card-bg);
     color: var(--ink);
     border: 1px solid var(--line);
     border-radius: 6px;
@@ -80,14 +68,13 @@
 /* Gives the <br/>-separated lines a little air between them */
 .memberships .desc br {
     display: block;
-    content: "";
     margin-top: 0.8rem;
 }
 
 /* ---------- Price pinned to the bottom ---------- */
 
 .memberships .price {
-    margin-top: auto;
+
     display: flex;
     align-items: baseline;
     gap: 0.15rem;
