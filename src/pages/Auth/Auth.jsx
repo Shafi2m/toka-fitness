@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import login_img from "../../assets/pexels-readymade-3850888.jpg"; // Adjust to your actual image path
+import "./Auth.css"
 
 const API_URL = import.meta.env.VITE_API_URL;
 
