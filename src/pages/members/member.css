@@ -74,6 +74,14 @@
     font-size: 0.975rem;
     line-height: 2;
     color: var(--muted);
+    text-wrap: pretty;
+}
+
+/* Gives the <br/>-separated lines a little air between them */
+.memberships .desc br {
+    display: block;
+    content: "";
+    margin-top: 0.8rem;
 }
 
 /* ---------- Price pinned to the bottom ---------- */
