@@ -1,18 +1,130 @@
 .auth-wrapper{
     display: flex;
+    align-items: stretch;
     gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 20px;
 }
-.auth-image-col{
+
+/* ---------- Image side ---------- */
+
+.auth-wrapper .auth-img-col{
     flex: 2;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
 }
-.auth-form{
+
+.auth-wrapper .auth-img-col p{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.auth-wrapper .login-img{
+    width: 100%;
+    max-width: 640px;
     flex: 1;
-    border: 2px solid ;
-    padding: 32px;
+    min-height: 0;
+    max-height: 560px;
+    object-fit: cover;
     border-radius: 16px;
 }
-.login-img{
-    max-width: 640px;
-    width: 100%;
+
+/* ---------- Form side ---------- */
+
+.auth-wrapper .auth-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 32px;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+}
+
+.auth-wrapper .auth-form h2{
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+}
+
+.auth-wrapper .form-input{
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-wrapper .form-input:focus{
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.auth-wrapper .auth-form button[type="submit"]{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.auth-wrapper .auth-form button[type="submit"]:hover:not(:disabled){
+    background: var(--accent2);
+}
+
+.auth-wrapper .auth-form button[type="submit"]:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.auth-wrapper .auth-form div{
+    text-align: center;
+}
+
+.auth-wrapper .auth-form div p{
+    margin: 0 0 4px;
+}
+
+.auth-wrapper .form-toggle-btn{
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.auth-wrapper .form-toggle-btn:hover{
+    color: var(--accent2);
+}
+
+.auth-wrapper .error-msg{
+    margin: 0;
+    color: #d93025;
+    font-size: 0.9rem;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px){
+    .auth-wrapper{
+        flex-direction: column;
+    }
+    .auth-wrapper .login-img{
+        max-height: 220px;
+    }
 }

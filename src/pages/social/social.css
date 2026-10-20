@@ -1,12 +1,8 @@
-
-* {
+.chat-page,
+.chat-page *,
+.chat-page *::before,
+.chat-page *::after {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: white;
 }
 
 .chat-page {
@@ -15,16 +11,19 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 18px 4% 20px 0;
+  font-family: Arial, sans-serif;
 }
 
-.sidebar {
+/* ---------- Sidebar ---------- */
+
+.chat-page .sidebar {
   width: 49px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
 }
 
-.add-friend {
+.chat-page .add-friend {
   width: 44px;
   height: 44px;
   border: none;
@@ -35,7 +34,9 @@ body {
   cursor: pointer;
 }
 
-.chat-main {
+/* ---------- Chat window ---------- */
+
+.chat-page .chat-main {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -43,7 +44,7 @@ body {
   gap: 16px;
 }
 
-.chat-window {
+.chat-page .chat-window {
   height: 70vh;
   min-height: 360px;
   max-height: 600px;
@@ -56,22 +57,22 @@ body {
   gap: 28px;
 }
 
-.message-row {
+.chat-page .message-row {
   display: flex;
   align-items: flex-start;
   gap: 8px;
   width: 100%;
 }
 
-.message-row.me {
+.chat-page .message-row.me {
   justify-content: flex-end;
 }
 
-.message-row.other {
+.chat-page .message-row.other {
   justify-content: flex-start;
 }
 
-.profile-icon {
+.chat-page .profile-icon {
   flex-shrink: 0;
   width: 19px;
   height: 19px;
@@ -85,7 +86,7 @@ body {
   margin-top: -16px;
 }
 
-.message-bubble {
+.chat-page .message-bubble {
   max-width: 65%;
   min-width: 150px;
   min-height: 82px;
@@ -98,19 +99,21 @@ body {
   color: white;
 }
 
-.me .message-bubble {
-  background: #91c1e5;
+.chat-page .me .message-bubble {
+  background: var(--accent);
   justify-content: flex-end;
   text-align: right;
 }
 
-.other .message-bubble {
+.chat-page .other .message-bubble {
   background: #87949c;
   justify-content: flex-start;
   text-align: left;
 }
 
-.message-form {
+/* ---------- Message input ---------- */
+
+.chat-page .message-form {
   min-height: 54px;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -120,7 +123,7 @@ body {
   gap: 6px;
 }
 
-.message-form input {
+.chat-page .message-form input {
   width: 100%;
   border: none;
   outline: none;
@@ -130,22 +133,22 @@ body {
   padding: 2px 0;
 }
 
-.message-form input::placeholder {
+.chat-page .message-form input::placeholder {
   color: #aaa;
 }
 
-.input-actions {
+.chat-page .input-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.extra-actions {
+.chat-page .extra-actions {
   display: flex;
   gap: 12px;
 }
 
-.extra-actions button {
+.chat-page .extra-actions button {
   border: none;
   background: transparent;
   color: #333;
@@ -153,7 +156,7 @@ body {
   cursor: pointer;
 }
 
-.send-button {
+.chat-page .send-button {
   width: 25px;
   height: 25px;
   border: none;
@@ -162,11 +165,15 @@ body {
   color: #777;
   font-size: 17px;
   cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-.send-button:hover {
-  background: #91c1e5;
+.chat-page .send-button:hover {
+  background: var(--accent2);
+  color: #fff;
 }
+
+/* ---------- Mobile ---------- */
 
 @media (max-width: 600px) {
   .chat-page {
@@ -174,24 +181,24 @@ body {
     gap: 6px;
   }
 
-  .sidebar {
+  .chat-page .sidebar {
     width: 36px;
   }
 
-  .add-friend {
+  .chat-page .add-friend {
     width: 32px;
     height: 32px;
     font-size: 16px;
   }
 
-  .chat-window {
+  .chat-page .chat-window {
     height: 68vh;
     min-height: 320px;
     padding: 24px 8px;
     gap: 22px;
   }
 
-  .message-bubble {
+  .chat-page .message-bubble {
     min-width: 0;
     max-width: 82%;
     min-height: 65px;
@@ -199,7 +206,7 @@ body {
     font-size: 12px;
   }
 
-  .profile-icon {
+  .chat-page .profile-icon {
     width: 17px;
     height: 17px;
   }

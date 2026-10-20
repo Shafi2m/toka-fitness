@@ -1,16 +1,21 @@
-
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./social.css";
 
 export default function Social() {
   const [message, setMessage] = useState("");
+  const bottomRef = useRef(null);
 
   const [messages, setMessages] = useState([
     { id: 1, text: "Welcome to ToKa Fitness!", sender: "other" },
-    { id: 2, text: "Share your fitness journey here.", sender: "me" },
+    { id: 2, text: "Share your fitness journey here.", sender: "other" },
     { id: 3, text: "Anyone got workout tips?", sender: "other" },
-    { id: 4, text: "Let's motivate each other!", sender: "me" },
+    { id: 4, text: "Let's motivate each other! WELCOME TO THE TOKA COMMUNITY", sender: "other" },
   ]);
+
+  // scroll to the newest message whenever the list changes
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   function sendMessage(event) {
     event.preventDefault();
@@ -61,6 +66,8 @@ export default function Social() {
               )}
             </div>
           ))}
+
+          <div ref={bottomRef} />
         </div>
 
         <form className="message-form" onSubmit={sendMessage}>
@@ -73,7 +80,6 @@ export default function Social() {
           />
 
           <div className="input-actions">
-        
             <button
               type="submit"
               className="send-button"
