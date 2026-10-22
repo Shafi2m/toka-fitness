@@ -5,7 +5,6 @@
     flex-wrap: wrap;
     gap: clamp(1.5rem, 3vw, 2.5rem);
     align-items: stretch;
-    max-width: 1200px;
     margin: 0 auto;
     padding: clamp(1.5rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
     background: var(--paper);
@@ -65,7 +64,7 @@
     text-wrap: pretty;
 }
 
-/* Gives the <br/>-separated lines a little air between them */
+
 .memberships .desc br {
     display: block;
     margin-top: 0.8rem;
