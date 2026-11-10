@@ -1,95 +1,96 @@
-import React, { useState, useRef, useEffect } from "react";
-import "./social.css";
+// import React, { useState, useRef, useEffect } from "react";
+// import "./social.css";
 
-export default function Social() {
-  const [message, setMessage] = useState("");
-  const bottomRef = useRef(null);
+// export default function Social() {
+//   const [message, setMessage] = useState("");
+//   const bottomRef = useRef(null);
 
-  const [messages, setMessages] = useState([
-    { id: 1, text: "Welcome to ToKa Fitness!", sender: "other" },
-    { id: 2, text: "Share your fitness journey here.", sender: "other" },
-    { id: 3, text: "Anyone got workout tips?", sender: "other" },
-    { id: 4, text: "Let's motivate each other! WELCOME TO THE TOKA COMMUNITY", sender: "other" },
-  ]);
+//   const [messages, setMessages] = useState([
+//     { id: 1, text: "Welcome to ToKa Fitness!", sender: "other" },
+//     { id: 2, text: "Share your fitness journey here.", sender: "other" },
+//     { id: 3, text: "Anyone got workout tips?", sender: "other" },
+//     { id: 4, text: "Let's motivate each other! WELCOME TO THE TOKA COMMUNITY", sender: "other" },
+//   ]);
 
-  // scroll to the newest message whenever the list changes
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+//   // scroll to the newest message whenever the list changes
+//   useEffect(() => {
+//     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+//   }, [messages]);
 
-  function sendMessage(event) {
-    event.preventDefault();
+//   function sendMessage(event) {
+//     event.preventDefault();
 
-    if (!message.trim()) return;
+//     if (!message.trim()) return;
 
-    setMessages((previousMessages) => [
-      ...previousMessages,
-      {
-        id: Date.now(),
-        text: message.trim(),
-        sender: "me",
-      },
-    ]);
+//     setMessages((previousMessages) => [
+//       ...previousMessages,
+//       {
+//         id: Date.now(),
+//         text: message.trim(),
+//         sender: "me",
+//       },
+//     ]);
 
-    setMessage("");
-  }
+//     setMessage("");
+//   }
 
-  return (
-    <main className="chat-page">
-      <aside className="sidebar">
-        <button
-          type="button"
-          className="add-friend"
-          aria-label="Add friend"
-        >
-          ♙+
-        </button>
-      </aside>
+//   return (
+//     <main className="chat-page">
+//       <aside className="sidebar">
+//         <button
+//           type="button"
+//           className="add-friend"
+//           aria-label="Add friend"
+//         >
+//           ♙+
+//         </button>
+//       </aside>
 
-      <section className="chat-main">
-        <div className="chat-window">
-          {messages.map((item) => (
-            <div
-              key={item.id}
-              className={`message-row ${item.sender}`}
-            >
-              {item.sender === "other" && (
-                <span className="profile-icon">●</span>
-              )}
+//       <section className="chat-main">
+//         <div className="chat-window">
+//           {messages.map((item) => (
+//             <div
+//               key={item.id}
+//               className={`message-row ${item.sender}`}
+//             >
+//               {item.sender === "other" && (
+//                 <span className="profile-icon">●</span>
+//               )}
 
-              <div className="message-bubble">
-                {item.text}
-              </div>
+//               <div className="message-bubble">
+//                 {item.text}
+//               </div>
 
-              {item.sender === "me" && (
-                <span className="profile-icon">●</span>
-              )}
-            </div>
-          ))}
+//               {item.sender === "me" && (
+//                 <span className="profile-icon">●</span>
+//               )}
+//             </div>
+//           ))}
 
-          <div ref={bottomRef} />
-        </div>
+//           <div ref={bottomRef} />
+//         </div>
 
-        <form className="message-form" onSubmit={sendMessage}>
-          <input
-            type="text"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
-            placeholder="hi......"
-            aria-label="Write a message"
-          />
+//         <form className="message-form" onSubmit={sendMessage}>
+//           <input
+//             type="text"
+//             value={message}
+//             onChange={(event) => setMessage(event.target.value)}
+//             placeholder="hi......"
+//             aria-label="Write a message"
+//           />
 
-          <div className="input-actions">
-            <button
-              type="submit"
-              className="send-button"
-              aria-label="Send message"
-            >
-              ↑
-            </button>
-          </div>
-        </form>
-      </section>
-    </main>
-  );
-}
+//           <div className="input-actions">
+//             <button
+//               type="submit"
+//               className="send-button"
+//               aria-label="Send message"
+//             >
+//               ↑
+//             </button>
+//           </div>
+//         </form>
+//       </section>
+//     </main>
+//   );
+// }
+export default function Social() {}
